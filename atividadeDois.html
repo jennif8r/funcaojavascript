@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividadeDois</title>
+    <link rel="stylesheet" href="estiloDois.css"
+</head>
+<body>
+    <button class="inicial"><a href="index.html">Inicial</a></button>
+    <h1> Retorne qual é o dia da semana: </h1>
+    <br>
+    <p id="dia-da-semana"></p>
+    <script>
+      function getDiaDaSemana() {
+        const diasDaSemana = ["Domingo, dia 0 da semana", "Segunda-feira, dia 1 da semana", "Terça-feira, dia 2 da semana", "Quarta-feira, dia 3 da semana", "Quinta-feira, dia 4 da semana", "Sexta-feira, dia 5 da semana", "Sábado, dia 6 da semana"];
+        const data = new Date();
+        const dia = data.getDay();
+        return diasDaSemana[dia];
+      }
+      const diaDaSemana = getDiaDaSemana();
+      const elementoDiaDaSemana = document.getElementById("dia-da-semana");
+      elementoDiaDaSemana.innerHTML = "Hoje é " + diaDaSemana + "!";
+    </script>
+</body>
+</html>

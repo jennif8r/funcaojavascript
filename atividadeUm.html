@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividadeUm</title>
+    <link rel="stylesheet" href="estiloDois.css">
+    <script>
+        function calcularArea(){
+        // Obter os valores dos campos de entrada
+          var bas = parseFloat(document.getElementById("bas").value);
+          var hal = parseFloat(document.getElementById("hal").value);
+        // Calcular a area
+          var are = (bas*hal)/2;    
+        //exibir o resultado
+          var resultado = document.getElementById("resultado");
+          resultado.innerHTML =  "O valor da area do triangulo é: " + are;
+        }
+    </script>
+</head>
+<body>
+  <button class="inicial"><a href="index.html">Inicial</a></button>
+    <h1> Calcular a área de um triangulo </h1> 
+    <br>
+    <form class="login-box">
+      <label for="bas">O valor da base do triangulo:</label>
+      <input type="number" id="bas"><br>
+      <br>
+      <label for="hal">O valor da altura do triangulo:</label>
+      <input type="number" id="hal"><br>
+      <br>
+      <button class="inicial" type="button" onclick="calcularArea()">Calcular Area</button>
+    </form>
+    <form class="resultado">
+    <p id="resultado"></p>
+  </form>
+    <br>
+    
+
+</body>
+</html>

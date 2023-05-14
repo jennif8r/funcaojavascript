@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividadeTres</title>
+    <link rel="stylesheet" href="estiloDois.css"
+</head>
+<body>
+    <button class="inicial"><a href="index.html">Inicial</a></button>
+    <br>
+    <form class="login-box">
+        <label for="numero">Digite um número:</label>
+        <input type="number" id="numero" name="numero">
+        <button class="inicial" type="button" onclick="calcular()">Calcular</button>
+      </form>
+      <h1> Em relação ao número digitado, as operações matematica deste numero é: </h1>
+      <form class="resultado">
+      <div id="resultado"></div>
+    </form>
+      <script>
+        function calcular() {
+          const numero = parseInt(document.getElementById("numero").value);
+          const valorAbsoluto = Math.abs(numero);
+          const parteInteira = Math.floor(numero);
+          const inteiroMaisProximo = Math.round(numero);
+          const raizQuadrada = Math.sqrt(numero);
+          const raizCubica = Math.cbrt(numero);
+          const quadrado = Math.pow(numero, 2);
+          const cubo = Math.pow(numero, 3);
+          const resultado = `
+            <p>Valor absoluto: ${valorAbsoluto}</p>
+            <p>Parte inteira: ${parteInteira}</p>
+            <p>Inteiro mais próximo: ${inteiroMaisProximo}</p>
+            <p>Raiz quadrada: ${raizQuadrada.toFixed(2)}</p>
+            <p>Raiz cúbica: ${raizCubica.toFixed(2)}</p>
+            <p>Ao quadrado: ${quadrado}</p>
+            <p>Ao cubo: ${cubo}</p>
+          `;
+          document.getElementById("resultado").innerHTML = resultado;
+        }
+      </script>
+
+</body>
+</html>

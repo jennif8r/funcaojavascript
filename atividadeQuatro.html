@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividadeQuatro</title>
+    <link rel="stylesheet" href="estiloDois.css">
+    <script>
+        function calcularMedia() {
+          // Obter os valores dos campos de entrada
+          var nome = document.getElementById("nome").value;
+          var nota1 = parseFloat(document.getElementById("nota1").value);
+          var nota2 = parseFloat(document.getElementById("nota2").value);
+          var nota3 = parseFloat(document.getElementById("nota3").value);
+          var nota4 = parseFloat(document.getElementById("nota4").value);
+          
+          // Calcular a média
+          var media = (nota1 + nota2 + nota3 + nota4) / 4;
+          
+          // Exibir o resultado
+          var resultado = document.getElementById("resultado");
+          resultado.innerHTML = nome + ", você teve média: " + media.toFixed(2);
+          
+          // Verificar se o usuário foi aprovado ou reprovado
+          if (media >= 7) {
+            resultado.innerHTML += "<br><strong>Parabéns!</strong> Você foi aprovado!";
+          } else {
+            resultado.innerHTML += "<br>Infelizmente, Você foi reprovado.";
+          }
+        }
+      </script>
+</head>
+<body>
+  <button class="inicial"><a href="index.html">Inicial</a></button>
+    <h1>Calculadora de média</h1>
+    <form class="login-box">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome"><br>
+      <br>
+      <label for="nota1">Nota 1:</label>
+      <input type="number" id="nota1"><br>
+      <br>
+      <label for="nota2">Nota 2:</label>
+      <input type="number" id="nota2"><br>
+      <br>
+      <label for="nota3">Nota 3:</label>
+      <input type="number" id="nota3"><br>
+      <br>
+      <label for="nota4">Nota 4:</label>
+      <input type="number" id="nota4"><br>
+      <br>
+      <button class="inicial" type="button" onclick="calcularMedia()">Calcular média</button>
+    </form>
+    <form class="resultado">
+    <div id="resultado"></div>
+  </form>
+    <br><br>
+</body>
+</html>
